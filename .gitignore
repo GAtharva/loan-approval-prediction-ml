@@ -1,0 +1,9 @@
+loan_env/
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+.env
+.env.*
+dataset.csv
+*.pkl
+*.joblib
