@@ -1,298 +1,144 @@
-@"
+# 🏦 Loan Approval Prediction & Analysis
 
-\# Loan Approval Prediction and Analysis Using Machine Learning and Power BI
+### Machine Learning + Power BI | Finance & Banking
 
+A complete data science project that predicts **loan approval outcomes using Machine Learning** and analyzes applicant and loan data through an **interactive Power BI dashboard**.
 
+---
 
-\## Project Overview
+## 📌 Project Overview
 
+Loan approval decisions depend on multiple factors such as income, credit history, education, employment status, loan amount, and property area.
 
+This project uses historical loan application data to:
 
-This project focuses on predicting loan approval outcomes using Machine Learning and analyzing loan application data through an interactive Power BI dashboard.
+- 🔍 Explore and clean loan application data
+- 🤖 Build Machine Learning classification models
+- 📊 Compare Logistic Regression and KNN
+- 🎯 Predict loan approval for new applicants
+- 📈 Analyze loan trends using Power BI
+- 💡 Extract meaningful business insights from the data
 
+**Domain:** Finance / Banking  
+**Project Type:** Supervised Machine Learning — Binary Classification
 
+---
 
-The project uses supervised machine learning techniques for binary classification, where the target variable indicates whether a loan application was approved or rejected.
+## 🛠️ Technologies Used
 
+| Technology | Purpose |
+|---|---|
+| 🐍 Python | Data processing & Machine Learning |
+| 🐼 Pandas | Data manipulation |
+| 🔢 NumPy | Numerical operations |
+| 🤖 Scikit-learn | Machine Learning |
+| 📊 Matplotlib | Data visualization |
+| 📈 Seaborn | Statistical visualization |
+| 📓 Jupyter Notebook | Model development |
+| ⚡ Power BI | Interactive dashboard |
+| 🔄 Power Query | Data transformation |
+| 📐 DAX | Dashboard calculations |
 
+---
 
-\### Domain
+## 📂 Dataset
 
-Finance / Banking
+The project uses the **Kaggle Loan Prediction dataset**.
 
+### Dataset Information
 
+- **614** loan application records
+- **13** original columns
+- Target variable: `loan_status`
 
-\### Project Type
+### Target Variable
 
-Supervised Machine Learning — Binary Classification
+| Value | Meaning |
+|---|---|
+| `Y` | ✅ Loan Approved |
+| `N` | ❌ Loan Rejected |
 
+The original CSV dataset is **not included in this repository**.
 
+See [`data/README.md`](data/README.md) for dataset documentation.
 
-\### Technologies Used
+---
 
-\- Python
+# 🤖 Machine Learning
 
-\- Pandas
-
-\- NumPy
-
-\- Scikit-learn
-
-\- Matplotlib
-
-\- Seaborn
-
-\- Jupyter Notebook
-
-\- Power BI
-
-\- DAX
-
-\- Power Query
-
-
-
-\## Dataset
-
-
-
-The project uses the Kaggle Loan Prediction dataset containing \*\*614 loan application records\*\* and \*\*13 columns\*\*.
-
-
-
-The target variable is:
-
-
-
-\- `loan\_status` — Y = Approved, N = Rejected
-
-
-
-The raw dataset is not included in this repository.
-
-
-
-\## Machine Learning Workflow
-
-
-
-The project follows these major steps:
-
-
-
-1\. Data loading and exploration
-
-2\. Data cleaning and preprocessing
-
-3\. Handling missing values
-
-4\. Encoding categorical variables
-
-5\. Feature preparation
-
-6\. Train-test split
-
-7\. Model training
-
-8\. Model evaluation
-
-9\. Model comparison
-
-10\. Loan approval prediction for a new applicant
-
-
-
-\## Machine Learning Models
-
-
-
-Two classification algorithms were implemented:
-
-
-
-\### 1. Logistic Regression
-
-
-
-Logistic Regression was used as the primary classification model for predicting loan approval.
-
-
-
-\### 2. K-Nearest Neighbors (KNN)
-
-
-
-KNN was implemented with \*\*K = 5\*\*.
-
-
-
-\## Model Performance
-
-
-
-| Model | Accuracy | Precision | Recall | F1 Score |
-
-|---|---:|---:|---:|---:|
-
-| Logistic Regression | \*\*86.18%\*\* | 84.00% | \*\*98.82%\*\* | \*\*90.81%\*\* |
-
-| KNN (K=5) | 81.30% | 81.00% | 95.29% | 87.57% |
-
-
-
-Based on the evaluation results, \*\*Logistic Regression performed better than KNN\*\* across the main evaluation metrics.
-
-
-
-\## Power BI Dashboard
-
-
-
-The project includes an interactive Power BI dashboard with two pages.
-
-
-
-\### Page 1 — Loan Approval Overview
-
-
-
-The dashboard provides:
-
-
-
-\- Total Applications
-
-\- Approved Loans
-
-\- Rejected Loans
-
-\- Approval Rate
-
-\- Average Loan Amount
-
-\- Loan approval status analysis
-
-\- Loan status by property area
-
-\- Loan status by credit history
-
-\- Loan status by education
-
-\- Loan status by gender
-
-\- Interactive slicers
-
-
-
-\### Page 2 — Applicant \& Financial Analysis
-
-
-
-The second page provides:
-
-
-
-\- Income vs Loan Amount analysis
-
-\- Average Loan Amount by Education
-
-\- Average Total Income by Loan Status
-
-\- Loan Status by Loan Term
-
-\- Self-Employment Distribution
-
-\- Average Applicant Income
-
-\- Interactive filters
-
-
-
-\## Dashboard Preview
-
-
-
-\### Loan Approval Overview
-
-
-
-!\[Loan Approval Overview](screenshots/dashboard\_page\_1.png)
-
-
-
-\### Applicant \& Financial Analysis
-
-
-
-!\[Applicant \& Financial Analysis](screenshots/dashboard\_page\_2.png)
-
-
-
-\## Machine Learning Results
-
-
-
-\### Model Comparison
-
-
-
-!\[Model Comparison](screenshots/model\_comparison.png)
-
-
-
-\### Confusion Matrix — Logistic Regression
-
-
-
-!\[Confusion Matrix](screenshots/confusion\_matrix.png)
-
-
-
-\## Project Files
-
-
+## Workflow
 
 ```text
+Raw Dataset
+     ↓
+Data Exploration
+     ↓
+Data Cleaning
+     ↓
+Missing Value Handling
+     ↓
+Categorical Encoding
+     ↓
+Feature Preparation
+     ↓
+Train-Test Split
+     ↓
+Model Training
+     ↓
+Model Evaluation
+     ↓
+Model Comparison
+     ↓
+New Applicant Prediction
+```
 
-Loan\_Approval\_Project/
+---
 
-│
+## 🧠 Models Used
 
-├── data/
+### 1. Logistic Regression
 
-│   └── README.md
+Logistic Regression was used to predict whether a loan application would be approved or rejected.
 
-│
+### 2. K-Nearest Neighbors (KNN)
 
-├── powerbi/
+KNN was implemented with:
 
-│   └── Loan\_Approval\_Dashboard.pbix
+**K = 5**
 
-│
+---
 
-├── presentation/
+# 📊 Model Performance
 
-│   └── Loan\_Approval\_Presentation.pptx
+| Model | Accuracy | Precision | Recall | F1 Score |
+|---|---:|---:|---:|---:|
+| 🥇 **Logistic Regression** | **86.18%** | 84.00% | **98.82%** | **90.81%** |
+| KNN (K=5) | 81.30% | 81.00% | 95.29% | 87.57% |
 
-│
+### 🏆 Best Model
 
-├── screenshots/
+**Logistic Regression** achieved the best overall performance.
 
-│   ├── dashboard\_page\_1.png
+It achieved:
 
-│   ├── dashboard\_page\_2.png
+- **86.18% Accuracy**
+- **84.00% Precision**
+- **98.82% Recall**
+- **90.81% F1 Score**
 
-│   ├── model\_comparison.png
+---
 
-│   └── confusion\_matrix.png
+# 📈 Power BI Dashboard
 
-│
+The project includes a two-page interactive Power BI dashboard.
 
-├── Loan\_Approval\_Project.ipynb
+## Page 1 — Loan Approval Overview
 
-├── model\_results.csv
+The first page provides an overview of loan approval patterns.
 
-├── requirements.txt
+### Key Metrics
 
-└── README.md
-
+- Total Applications
+- Approved Loans
+- Rejected Loans
+-
